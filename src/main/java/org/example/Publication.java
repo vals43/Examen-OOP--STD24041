@@ -17,4 +17,28 @@ public class Publication {
         this.Content = content;
         this.Comments = new ArrayList<Comment>();
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public String getContent() {
+        return Content;
+    }
+
+    public List<Comment> getComments() {
+        return Comments;
+    }
+
+    public void AddComments(Comment Commentaire) {
+        Comments.add(Commentaire);
+    }
 }
