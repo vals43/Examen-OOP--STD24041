@@ -1,5 +1,6 @@
-package org.example;
+package test;
 
+import org.example.*;
 import org.junit.*;
 
 import static org.junit.Assert.*;
