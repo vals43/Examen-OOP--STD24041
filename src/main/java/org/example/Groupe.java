@@ -5,13 +5,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Groupe {
+    private Admin Admin;
     private String name;
     private final List<User> Users;
     private final List<Publication> Publications;
 
-    public Groupe(String name) {
+    public Groupe(String name, Admin Admin) {
+        this.Admin = Admin;
         this.name = name;
         this.Users = new ArrayList<>();
+        Users.add(Admin);
         this.Publications = new ArrayList<>();
     }
 

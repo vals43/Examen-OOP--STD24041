@@ -13,7 +13,7 @@ public class GroupeTest {
     @Before
     public void setup() {
         admin = new Admin(1, "Admin", "admin@example.com");
-        group = new Groupe("Groupe1");
+        group = new Groupe("Groupe1", admin);
         post = new Publication("Hello World", admin, "test");
         coms = new Comment(1, admin, "test Comment");
     }
