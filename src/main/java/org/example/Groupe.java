@@ -7,11 +7,12 @@ import java.util.stream.Collectors;
 public class Groupe {
     private String name;
     private final List<User> Users;
-    private List<Publication> Publications;
+    private final List<Publication> Publications;
 
     public Groupe(String name) {
         this.name = name;
         this.Users = new ArrayList<>();
+        this.Publications = new ArrayList<>();
     }
 
     public String getName() {

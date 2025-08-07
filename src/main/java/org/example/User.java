@@ -30,14 +30,4 @@ public class User {
     public LocalDate getDateCreation() {
         return dateCreation;
     }
-
-    public Publication setPublication(int publicationId,String publicationTitle, String publicationContent) {
-        Publication Pub = new Publication(publicationId,publicationTitle,this,publicationContent);
-        return Pub;
-    }
-    public Comment setComment(int commentId, String commentContent, int publicationId) {
-        Comment Coms = new Comment(commentId,this,commentContent ,publicationId);
-        // add comment to publicationComment
-        return Coms;
-    }
 }
