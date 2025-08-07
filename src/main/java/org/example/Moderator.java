@@ -1,7 +1,7 @@
 package org.example;
 
 public class Moderator extends SimpleUser {
-    public Moderator(int id, String username, String email) {
+    public Moderator(String id, String username, String email) {
         super(id, username, email);
     }
 

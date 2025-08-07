@@ -2,14 +2,13 @@ package org.example;
 
 public class SimpleUser extends User {
 
-    public SimpleUser(int id, String name, String email) {
+    public SimpleUser(String id, String name, String email) {
         super(id, name, email);
     }
-
-    public Publication createPost(String Title,String content) {
+    public Publication createPublication(String Title,String content) {
             return new Publication(Title ,this, content);
         }
-    public void comment(Publication pub, Comment comment) {
+    public void AddComment(Publication pub, Comment comment) {
             pub.AddComments(comment);
     }
 

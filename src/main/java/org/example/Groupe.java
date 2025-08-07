@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Groupe {
-    private Admin Admin;
+    private final Admin Admin;
     private String name;
     private final List<User> Users;
     private final List<Publication> Publications;
@@ -16,6 +16,10 @@ public class Groupe {
         this.Users = new ArrayList<>();
         Users.add(Admin);
         this.Publications = new ArrayList<>();
+    }
+
+    public Admin getAdmin() {
+        return Admin;
     }
 
     public String getName() {
@@ -47,14 +51,14 @@ public class Groupe {
     public void RemovePublications(Publication publications) {
         Publications.remove(publications);
     }
-    public int getTotalPosts() {
+    public int getTotalPublications() {
         return Publications.size();
     }
 
     public boolean containsUser(User user) {
         return Users.contains(user);
     }
-    public List<Publication> searchPosts(String keyword) {
+    public List<Publication> searchPublication(String keyword) {
         return Publications.stream()
                 .filter(p -> p.getContent().toLowerCase().contains(keyword.toLowerCase()))
                 .collect(Collectors.toList());
