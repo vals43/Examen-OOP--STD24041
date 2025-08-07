@@ -9,9 +9,8 @@ public class SimpleUser extends User {
     public Publication createPost(String Title,String content) {
             return new Publication(Title ,this, content);
         }
-
-        public void comment(Publication pub, Comment comment) {
+    public void comment(Publication pub, Comment comment) {
             pub.AddComments(comment);
-        }
+    }
 
 }

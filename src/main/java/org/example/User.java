@@ -31,17 +31,3 @@ public class User {
         return dateCreation;
     }
 }
-public class StandardUser extends User {
-    public StandardUser(String id, String username, String email) {
-        super(id, username, email);
-    }
-
-    public Post createPost(String content) {
-        return new Post(content, this);
-    }
-
-    public void comment(Post post, String comment) {
-        post.addComment(comment);
-    }
-}
-

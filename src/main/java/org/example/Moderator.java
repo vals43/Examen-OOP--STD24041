@@ -1,16 +1,16 @@
 package org.example;
 
-public class Moderator extends StandardUser {
-    public Moderator(String id, String username, String email) {
+public class Moderator extends SimpleUser {
+    public Moderator(int id, String username, String email) {
         super(id, username, email);
     }
 
-    public void deletePost(Groupe group, Publication post) {
-        group.RemovePublications(post);
+    public void deletePublication(Groupe group, Publication publication) {
+        group.RemovePublications(publication);
     }
 
-    public void deleteComment(Publication post, Comment commentIndex) {
-        post.RemoveComments(commentIndex);
+    public void deleteComment(Publication publication, Comment commentIndex) {
+        publication.RemoveComments(commentIndex);
     }
 }
 

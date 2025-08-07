@@ -30,10 +30,6 @@ public class Groupe {
         return Users;
     }
 
-    public boolean containsUser(User user) {
-        return Users.contains(user);
-    }
-
     public void AddUsers(User users) {
         Users.add(users);
     }
@@ -53,6 +49,10 @@ public class Groupe {
     }
     public int getTotalPosts() {
         return Publications.size();
+    }
+
+    public boolean containsUser(User user) {
+        return Users.contains(user);
     }
     public List<Publication> searchPosts(String keyword) {
         return Publications.stream()
